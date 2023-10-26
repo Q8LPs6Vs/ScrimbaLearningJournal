@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/styles.css">
+        <title>Learning Journal</title>
+    </head>
+    <body>
+        <header>
+            <img src="./images/logo.png" alt="Logo of my Learning Journal"
+                 class="logo">
+            <nav>
+                <span class="nav-btn-open">☰</span>
+                <ul class="nav-desktop uppercase">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./pages/about-me.html">About Me</a></li>
+                </ul>
+                <div class="nav-mobile-container">
+                    <button class="nav-btn-close">X</button>
+                    <ul class="nav-mobile uppercase">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./pages/about-me.html">About Me</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <a href="./pages/hero-article.html" class="main-article-link">
+                <section id="hero">
+                <p class="hero-date uppercase">July 23, 2022</p>
+                <h1 class="hero-header">My new journey as a bootcamp student
+                    .</h1>
+                <p class="hero-text">After several months of learning in the
+                    Frontend
+                    Developer
+                Career Path, I've made the big jump over to the Bootcamp to get
+                expert code reviews of my Solo Projects projects and meet
+                like-minded peers.</p>
+                </section>
+            </a>
+            <section id="articles">
+                <!-- render articles here -->
+            </section>
+            <button id="articles-btn">Load more</button>
+        </main>
+        <footer>
+            <p>My Learning Journal</p>
+            <p>Copyright © 2023</p>
+        </footer>
+        <script src="./toggleMenu.js" type="module"></script>
+        <script src="./index.js" type="module"></script>
+    </body>
+</html>

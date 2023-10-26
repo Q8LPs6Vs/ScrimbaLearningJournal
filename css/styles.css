@@ -1,0 +1,269 @@
+/*=========================================================
+I HAVE TO SET UP GOOGLE FONTS LOCALLY. BECAUSE GERMANY.
+=========================================================*/
+
+@font-face {
+    font-family: "Source Sans 3";
+    src: url("../fonts/SourceSans3-VariableFont_wght.ttf") format("truetype");
+}
+
+/*=========================================================
+GENERAL
+=========================================================*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
+    line-height: 1.0;
+    margin: 0;
+}
+
+h2 {
+    margin: 0.5em 0;
+}
+
+a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.25s;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+/*=========================================================
+HEADER / NAVIGATION
+=========================================================*/
+
+header {
+    padding: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    display: block;
+    height: 2rem;
+    width: auto;
+}
+
+nav a {
+    color: black;
+}
+
+.nav-mobile-container {
+    transition: 0.5s all;
+    position: fixed;
+    font-size: 2rem;
+    background: white;
+    color: black;
+    inset: 0 0 0 105%;
+    width: 100%;
+    height: 100vh;
+}
+
+.nav-mobile {
+    text-align: center;
+    list-style-type: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.nav-mobile li {
+    padding-left: 0;
+    margin-block: 0.5em;
+    transition: 0.5s all;
+}
+
+.nav-mobile li:hover {
+    background: rgba(230, 230, 230, 0.9);
+}
+
+.nav-btn-open:hover, .nav-btn-open:focus, .nav-btn-close:hover, .nav-btn-close:focus {
+    transform: scale(1.2);
+    color: #555555;
+}
+
+.nav-btn-open {
+    cursor:pointer;
+    display: block;
+    font-weight: bolder;
+    font-size: 2rem;
+    transition: 0.5s all;
+}
+
+.nav-btn-close {
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    font-size: 2rem;
+    background: white;
+    border: none;
+    transition: 0.5s all;
+}
+
+.active {
+    inset: 0 0 0 0;
+    transition: 1s all;
+}
+
+.nav-desktop {
+    display: none;
+}
+
+
+/*=========================================================
+HERO SECTION / MAIN SECTION
+=========================================================*/
+
+#hero {
+    color: white;
+    background-image: url("../images/blog-image-hero.png");
+    background-size: cover;
+    height: 50svh;
+    padding: 1em;
+    margin-bottom: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+#about-me, #main-article {
+    padding: 1.5em;
+    margin-bottom: 2.5rem;
+}
+
+#about-me h1, #main-article h1 {
+    font-size: 2.5rem;
+}
+
+.hero-date {
+    font-size: 0.67rem;
+}
+
+.card {
+    padding: 0 1.5em 2em 1.5em;
+}
+
+.card-date, .main-article-date {
+    font-size: 0.875rem;
+}
+
+.about-me-photo {
+    width: 15rem;
+    margin-bottom: 2.5em;
+}
+
+.main-article-photo {
+    margin-block: 2.5rem;
+}
+
+.main-article-link:hover {
+    opacity: 0.85;
+    text-shadow: 0 0 3px whitesmoke ;
+}
+
+#recent-posts h3 {
+    text-align: center;
+}
+
+#articles-btn {
+    display: block;
+    border: none;
+    margin: 1em auto;
+    transition: 0.25s all;
+    font-family: inherit;
+    font-size: 1.25em;
+    background-color: white;
+}
+
+#articles-btn:hover {
+    background: lightgray;
+    transform: scale(1.1);
+}
+
+/*=========================================================
+FOOTER SECTION
+=========================================================*/
+
+footer {
+    padding: 1.5em;
+    background: #202020;
+    color: white;
+}
+
+footer p {
+    font-size: 0.67rem;
+    margin: 0;
+    text-align: center;
+}
+
+footer p:first-of-type {
+    font-weight: bold;
+}
+
+/*=========================================================
+MEDIA QUERIES
+=========================================================*/
+
+@media (min-width: 800px) {
+
+    header, main, footer {
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+
+    .nav-mobile, .nav-btn-open {
+        display: none;
+    }
+
+    .nav-desktop {
+        display: flex;
+        list-style-type: none;
+    }
+
+    .nav-desktop li {
+        padding: 0.25em;
+        transition: 0.25s all;
+    }
+
+    .nav-desktop li:hover {
+        background: lightgray;
+        transform: scale(1.1);
+    }
+
+    .nav-desktop li:first-of-type {
+        margin-right: 3em;
+    }
+
+    #articles, .recent-posts-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 1em;
+        padding: 1.5em;
+    }
+
+    #hero {
+        height: 66svh;
+    }
+
+    .card {
+        padding: 0;
+    }
+}
